@@ -1,7 +1,7 @@
 package imperative.logic;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class PerfectNumber {
 		
@@ -20,10 +20,10 @@ public class PerfectNumber {
 		if (sum < n) return STATE.DEFICIENT;
 		return STATE.ABUNDANT;		
 	}
-	
-	public  static List<Integer> divisors(int n)	{				
+
+	public  static Set<Integer> divisors(int n)	{				
 		validatePositiveNumber(n);
-		List<Integer> divisors = new ArrayList<>();
+		Set<Integer> divisors = new HashSet<>();
 		for(int i = 1; i <= n; i++)
 		{
 			if (n % i == 0) divisors.add(i);			
